@@ -19,9 +19,9 @@ files = [
 
 4. Create an empty file called `formatting.csv`
 
-4. Run the python file `paragraph_formatter.py`
+5. Run the python file `paragraph_formatter.py`
 
-5. Enjoy.
+6. Enjoy.
 
 # License
 
