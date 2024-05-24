@@ -17,6 +17,8 @@ files = [
 
 3. Create an empty file called `formatting.json`
 
+4. Create an empty file called `formatting.csv`
+
 4. Run the python file `paragraph_formatter.py`
 
 5. Enjoy.

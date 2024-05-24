@@ -5,11 +5,13 @@ Project Gutenberg-like works.
 
 from secrets_list import files
 import json
+import csv
 
 list_of_text = []
+fields = ['output']
 
 def format_text(file_num, file):
-    f = open(file, 'r', encoding='utf8')
+    f = open(file, 'r', encoding='utf-8')
     paragraph = []
     for idx, sentence in enumerate(f):
         line = sentence.strip()
@@ -38,5 +40,10 @@ print(f"LIST LENGTH: {len(list_of_text)}")
 
 list_of_text_json = json.dumps(list_of_text)
 
-with open("formatting.json", "w") as outfile:
+with open("formatting.json", "w", encoding='utf-8') as outfile:
     outfile.write(list_of_text_json)
+
+with open("formatting.csv", 'w', encoding='utf-8', newline='') as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames=fields)
+    writer.writeheader()
+    writer.writerows(list_of_text)

@@ -2,3 +2,4 @@ __pycache__/
 texts/
 secrets_list.py
 formatting.json
+formatting.csv
